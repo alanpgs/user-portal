@@ -1,0 +1,29 @@
+.btn_primary{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25em 1.25em;
+    border-radius: 0.5em;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: var(--sm-text-2);
+    outline: none;
+    border:none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-family);
+    height: var(--default-height);
+
+    &:hover {
+        box-shadow: 2px 5px 16px var(--primary-color);
+    }
+
+    &.secondary{
+        background-color: var(--white-color);
+        &:hover {
+            box-shadow: 2px 5px 16px var(--white-color);
+        }
+    }
+}

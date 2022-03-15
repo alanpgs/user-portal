@@ -1,0 +1,26 @@
+footer{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+
+    .footer_content{    
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+        p{
+            position: relative;
+            display: block;
+            font-size: var(--sm-text-2);
+            font-weight: 400;
+            margin: 0;
+            padding: 1.5em 0;
+            color: var(--white-color);
+        }
+    }
+}

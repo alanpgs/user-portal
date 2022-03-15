@@ -1,0 +1,90 @@
+header{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    padding: 1em 0;
+
+    .container{
+        height: 100%;
+    }
+
+    .nav_wrapper{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+
+        .nav_logo{
+            position: relative;
+            display: block;
+            width: auto;
+            height: auto;
+
+            .nav_logo_link{
+                position: relative;
+                display: block;
+                margin: 0;
+                text-decoration: none;
+                height: auto;
+                padding: 0.25em 0;
+                width: auto;
+
+                h1{
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    font-size: 1.75vw;
+                    font-weight: 600;
+                    color:var(--white-color);
+
+                    span{
+                        color: var(--primary-color);
+                    }
+                }
+
+                img{
+                    position: relative;
+                    display: block;
+                    width: 13.5vw;
+                    height: auto;
+                }
+            }
+        }
+
+        nav{
+            position: relative;
+            display: block;
+
+            ul{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                li{
+                    position: relative;
+                    display: block;
+                    margin-inline-end: 1.25em;
+
+                    &:last-child{
+                        margin-inline-end: 0;
+                    }
+
+                    .nav_link{
+                        position: relative;
+                        display: block;
+                        font-size: var(--sm-text-2);
+                        color: var(--white-color);
+                        transition: all 0.3s ease;
+
+                        &:hover, &:focus, &:active{
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}

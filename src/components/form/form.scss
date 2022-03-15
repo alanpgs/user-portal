@@ -1,0 +1,47 @@
+.field_{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+
+    &.full_{
+        grid-column: 1/-1;
+    }
+
+    label{
+        position: relative;
+        display: block;
+        font-size: var(--sm-text-2);
+        font-weight: 600;
+        margin-bottom: 0.25em;
+    }
+
+    input{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 2.75rem;
+        box-shadow: none;
+        transition: all 0.3s ease;
+        background-color: #f2f7ff;
+        border: none;
+        border-radius: 0.5em;
+        box-sizing: border-box;
+        padding: 0 0.75em;
+        font-size: var(--sm-text-2);
+        font-weight: 600;
+        border: 1px solid #e1e7f1;
+        font-family: var(--font-family);
+
+        &:focus{
+            outline: none;
+            box-shadow: 0px 0px 5px #0b67f9;
+        }
+    }
+    
+    &.attachment_{
+        input[type=file]{
+            padding-top: 0.65rem;
+        }
+    }
+}

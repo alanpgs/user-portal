@@ -1,0 +1,19 @@
+.btn_group{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    &.center_{
+        justify-content: center;
+    }
+
+    &.margin_{
+        margin: 1em 0;
+    }
+
+    button{
+        margin-inline-end: 0.75em;
+    }
+}

@@ -1,0 +1,35 @@
+.home_banner{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10vh 0;
+    background: var(--primary-color);
+
+    .banner_content{
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        h1{
+            position: relative;
+            display: block;
+            font-size: 4vw;
+            margin: 0;
+            line-height: 1.5;
+            font-weight: 800;
+            color: var(--white-color);
+
+            // span{
+            //     color: var(--primary-color);
+            // }
+        }
+
+        p{
+            position: relative;
+            display: block;
+            font-size: var(--md-text-2);
+            color: var(--white-color);
+        }
+    }
+}
