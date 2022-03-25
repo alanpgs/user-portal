@@ -1,66 +1,75 @@
 import SectionTitle from "../../../components/sectionTitle/sectionTitle";
-import Button from "../../../components/button/button";
+import {UserButton, ButtonGroup} from "../../../components/button/button";
+import {UInput, UDate, UUpload} from "../../../components/form/input";
 import { useState } from "react";
 import "./homeForm.scss";
-
+ 
 function HomeForm() {
 
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
-        phone: '',
+        password: '',
+        phone: +971, 
         dob: '',
-        city: '',
+        city: 'Dubai',
         imageUrl: ''
     });
 
     const firstNameFun = (event)=> {
         setFormData({
             ...formData,
-            firstName: event.target.value
+            firstName: event
         })
     }
 
     const lastNameFun = (event)=> {
         setFormData({
             ...formData,
-            lastName: event.target.value
+            lastName: event
         })
     }
 
     const emailFun = (event)=> {
         setFormData({
             ...formData,
-            email: event.target.value
+            email: event
+        })
+    }
+
+    const passwordFun = (event)=> {
+        setFormData({
+            ...formData,
+            password: event
         })
     }
 
     const phoneFun = (event)=> {
         setFormData({
             ...formData,
-            phone: event.target.value
+            phone: event
         })
     }
 
     const dobFun = (event)=> {
         setFormData({
             ...formData,
-            dob: event.target.value
+            dob: event
         })
     }
 
     const cityFun = (event)=> {
         setFormData({
             ...formData,
-            city: event.target.value
+            city: event
         })
     }
 
     const imageFun = (event)=> {
         setFormData({
             ...formData,
-            imageUrl: event.target.value
+            imageUrl: event
         })
     }
 
@@ -78,45 +87,20 @@ function HomeForm() {
                         <SectionTitle title="Create a User" />
                     </div>
                 </div>
-                <div className="field_">
-                    <label>First Name</label>
-                    <input type="text" onChange={firstNameFun}/>
-                </div>
 
-                <div className="field_">
-                    <label>Last Name</label>
-                    <input type="text" onChange={lastNameFun}/>
-                </div>
-
-                <div className="field_">
-                    <label>Email</label>
-                    <input type="email" onChange={emailFun}/>
-                </div>
-
-                <div className="field_">
-                    <label>Phone</label>
-                    <input type="number" onChange={phoneFun}/>
-                </div>
-
-                <div className="field_">
-                    <label>Date of Birth</label>
-                    <input type="date" onChange={dobFun}/>
-                </div>
-
-                <div className="field_">
-                    <label>City</label>
-                    <input type="text" onChange={cityFun}/>
-                </div>
-
-                <div className="field_ attachment_">
-                    <label>Picture</label>
-                    <input type="file" onChange={imageFun}/>
-                </div>
+                <UInput title="First Name" value={formData.firstName} getData={firstNameFun} />
+                <UInput title="Last Name" value={formData.lastName} getData={lastNameFun} />
+                <UInput title="Email" value={formData.email} type="email" getData={emailFun} />
+                <UInput title="Password" value={formData.password} type="password" getData={passwordFun} />
+                <UInput title="Phone" value={formData.phone} type="number" getData={phoneFun} />
+                <UDate title="Date of Birth" value={formData.dob} getData={dobFun} />
+                <UInput title="City" value={formData.city} getData={cityFun} />
+                <UUpload title="Picture" getData={imageFun} />
 
                 <div className="field_ full_">
-                    <div className="btn_group">
-                        <button type="submit">Submit</button>
-                    </div>
+                    <ButtonGroup>
+                         <UserButton title="Create Account" type="submit"/> 
+                    </ButtonGroup>
                 </div>
 
             </form>

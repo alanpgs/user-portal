@@ -3,11 +3,13 @@
     --secondary-color: #999999;
     --third-color: #1c1f33;
     --bg-color: #090a1b;
-    --border-color: #909090;
+    --border-color: #f1f1f1;
     --text-color: #111111;
     --white-color: #fff;
+    --bg-color: rgb(255, 255, 255);
     --font-family: 'Poppins', sans-serif;
     --default-height: 4.5vh;
+    --sm-height: 3.75vh;
     --em-text: 0.7vw;
     --em-text-2: 0.8vw;
     --sm-text: 0.9vw;
@@ -21,6 +23,31 @@
     --lg-text-4: 2.75vw;
 }
 
+
+html[theme=dark]{
+    --primary-color: #0b67f9;
+    --secondary-color: #999999;
+    --third-color: #1c1f33;
+    --bg-color: #090a1b;
+    --border-color: #303030;
+    --text-color: #fff;
+    --white-color: #111;
+    --bg-color: rgb(29, 29, 29);
+    --font-family: 'Poppins', sans-serif;
+    --default-height: 4.5vh;
+    --sm-height: 3.75vh;
+    --em-text: 0.7vw;
+    --em-text-2: 0.8vw;
+    --sm-text: 0.9vw;
+    --sm-text-2: 0.95vw;
+    --md-text: 1vw;
+    --md-text-2: 1.25vw;
+    --md-text-3: 1.5vw;
+    --lg-text: 1.75vw;
+    --lg-text-2: 2vw;
+    --lg-text-3: 2.25vw;
+    --lg-text-4: 2.75vw;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
     :root{

@@ -1,0 +1,78 @@
+.user_item{
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 1px solid #e1e7f1;
+    border-radius: 1em;
+    overflow: hidden;
+    padding-bottom: 1.5em;
+
+    .inner_profile_image{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            transform-origin: top;
+            transform: scaleY(0.5);
+        }
+
+        .image_{
+            position: relative;
+            display: inline-block;
+            width: 5vw;
+            height: 5vw;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #e1e7f1;
+            margin: 1.75em 0;
+
+            picture{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+                img{
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    .content_{
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0 1em;
+        h4{
+            position: relative;
+            display: block;
+            margin: 0;
+            font-size: var(--md-text);
+        }
+
+        p{
+            position: relative;
+            display: block;
+            margin: 0;
+            font-size: var(--em-text-2);
+        }
+    }
+}

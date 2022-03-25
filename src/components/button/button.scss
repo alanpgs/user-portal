@@ -26,4 +26,29 @@
             box-shadow: 2px 5px 16px var(--white-color);
         }
     }
+
+    &.sm_{
+        padding: 0.1em 0.75em;
+        font-size: var(--em-text);
+        height: var(--sm-height);
+    }
+
+    &.icon_{
+        height: var(--default-height);
+        width: var(--default-height);
+        padding: 0;
+
+        span{
+            width: 100%;
+            padding: 0 28%;
+
+            img{
+                position: relative;
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 0;
+            }
+        }
+    }
 }
