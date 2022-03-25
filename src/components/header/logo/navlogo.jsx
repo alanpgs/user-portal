@@ -1,8 +1,14 @@
-import brandLogo from "../../../assets/images/logo.svg";
+import { useContext } from "react/";
+import ThemeContext from "../../../store/themeContext";
+import blackLogo from "../../../assets/images/logo.svg";
+import whiteLogo from "../../../assets/images/logo-white.svg";
+
 
 function NavLogo() {
 
-    const logo = brandLogo;
+    const {isDark} = useContext(ThemeContext)
+
+    const logo = isDark ? whiteLogo : blackLogo;
 
     return (
         <div className="nav_logo">

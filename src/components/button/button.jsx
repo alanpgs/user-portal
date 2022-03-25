@@ -4,7 +4,7 @@ import icon from '../../assets/images/theme.svg';
 export const UserButton = (props)=>{ 
 
     let title_ = props.title ? props.title : '';
-    let type_ = props.button ? props.button : 'button';
+    let type_ = props.type ? props.type : 'button';
     let style_ = props.style ? props.style : 'default';
 
     return (

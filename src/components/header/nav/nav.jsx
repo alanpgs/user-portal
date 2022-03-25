@@ -1,17 +1,17 @@
-import { useEffect } from 'react';
+import { useContext } from 'react';
+import ThemeContext from '../../../store/themeContext';
 import Button, {IconButton} from "../../button/button";
 
 function Nav() {
 
-    const changeTheme = (event)=> {
-        let THEME = localStorage.getItem('theme')
+    const {theme, setThemeFunction} = useContext(ThemeContext);
 
-        if(THEME == 'light'){
-            localStorage.setItem('theme', 'dark')
+    const changeTheme = ()=> {
+        if(theme == 'light'){
+            setThemeFunction('dark');
         }else{
-            localStorage.setItem('theme', 'light')
+            setThemeFunction('light');
         }
-      
     }
 
     return (
