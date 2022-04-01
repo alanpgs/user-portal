@@ -7,9 +7,16 @@ export const UserButton = (props)=>{
     let type_ = props.type ? props.type : 'button';
     let style_ = props.style ? props.style : 'default';
 
+    const triggerMe = (event)=> {
+        if(props.trigger){
+            props.trigger(event)
+        }
+    }
+
+
     return (
 
-        <button className={'btn_primary' + ' ' + style_} type={type_}>
+        <button className={'btn_primary' + ' ' + style_} type={type_} onClick={triggerMe} >
             <span>{title_}</span>
         </button>
 

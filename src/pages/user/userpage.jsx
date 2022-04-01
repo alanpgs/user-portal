@@ -5,37 +5,55 @@ import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import RecentUsers from "../../components/recentusers/recentusers";
 import UserTable from "../../components/usertable/usertable";
 import AddUserEmail from "../../components/addUserEmail/addUserEmail";
+import UserImages from "../../components/userimages/userimages";
 import "./userpage.scss";
 
 function UserPage() {
+
+   
+
     return(
-        <UserProvider>
-            <main className="page_">
-                <UserBanner/> 
+        
+            
+                <main className="page_">
+                    <UserBanner/> 
 
-                <Section padding="no_padding_top">
-                        <div className="container">
-                            <SectionTitle title="Add User Email"/>
-                            <AddUserEmail />
-                        </div>
-                </Section>
+                    <Section padding="no_padding_top">
+                            <div className="container">
+                                <SectionTitle title="Add User Email"/>
+                                <AddUserEmail />
+                            </div>
+                    </Section>
 
-                <Section padding="no_padding_top">
-                    <div className="container">
-                        <SectionTitle title="Recent Users"/>
-                        <RecentUsers />
-                    </div>
-                </Section>
+                    <Section padding="no_padding_top">
+                            <div className="container">
+                                <SectionTitle title="User Images"/>
+                                <UserImages/>
+                            </div>
+                    </Section>
 
-                <Section padding="no_padding_top">
-                    <div className="container">
-                        <SectionTitle title="Users List" />
-                        <UserTable />
-                    </div>
-                </Section>
 
-            </main>
-        </UserProvider>
+                    <UserProvider>
+                        <Section padding="no_padding_top">
+                            <div className="container">
+                                <SectionTitle title="Recent Users"/>
+                                <RecentUsers />
+                            </div>
+                        </Section>
+
+                        <Section padding="no_padding_top">
+                            <div className="container">
+                                <SectionTitle title="Users List" />
+                                <UserTable />
+                            </div>
+                        </Section>
+                    </UserProvider>
+
+                    
+
+                </main>
+
+        
     )
 }
 

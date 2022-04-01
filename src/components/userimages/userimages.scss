@@ -1,0 +1,41 @@
+.userImages_wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin-top: 1.5em;
+
+    .item_{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-top: 100%;
+        overflow: hidden;
+        border-radius: 1.25em;
+        border: 4px solid var(--border-color);
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover{
+            border-color: #02a7e9;
+        }
+
+        picture{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img{
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

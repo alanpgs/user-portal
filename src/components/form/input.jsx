@@ -1,4 +1,7 @@
+import { useContext } from 'react';
+import { useUserReg } from '../../store/userRegistration';
 import './form.scss';
+
 
 export const UInput = (props)=> {
 
@@ -31,11 +34,19 @@ export const USelect = (props)=> {
 
 export const UUpload = (props)=> {
 
+    const {fileUpload} = useUserReg();
     let title_ = props.title;
 
     const setData = (event)=> {
-        props.getData(event.target.value)
-    }
+
+        let file = event.target.files[0];
+        let meta = event.target.files[0].type;
+
+        if(!file) return;
+
+        fileUpload(file, meta);
+        props.getData('test')
+    }   
 
     return (
         <div className="field_ attachment_">
