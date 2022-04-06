@@ -1,4 +1,4 @@
-import {UserButton} from "../button/button";
+import {RoutBtn} from "../button/button";
 import { useContext } from "react";
 import UserContext from "../../store/userContext";
 
@@ -32,7 +32,7 @@ const UserTable = ()=> {
                                 <td>{item.lastName}</td>
                                 <td>{item.title}</td>
                                 <td>
-                                    <UserButton title="View Details" type="button" style="sm_" />
+                                    <RoutBtn title="View Details" style="sm_" link={`/user/${item.id}`}/>
                                 </td>
                             </tr>
                         )

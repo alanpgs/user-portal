@@ -6,7 +6,7 @@ import { LoaderProvider } from './store/loaderContext';
 ReactDOM.render(
   <React.StrictMode>
     <LoaderProvider>
-      <App />
+        <App />
     </LoaderProvider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -6,6 +6,7 @@ import RecentUsers from "../../components/recentusers/recentusers";
 import UserTable from "../../components/usertable/usertable";
 import AddUserEmail from "../../components/addUserEmail/addUserEmail";
 import UserImages from "../../components/userimages/userimages";
+import userImage from '../../assets/images/alan-user.png';
 import "./userpage.scss";
 
 function UserPage() {
@@ -16,7 +17,11 @@ function UserPage() {
         
             
                 <main className="page_">
-                    <UserBanner/> 
+                    <UserBanner
+                        title="Alan Sha Salim"
+                        designation="Frontend Developer"
+                        img = {userImage}
+                    /> 
 
                     <Section padding="no_padding_top">
                             <div className="container">

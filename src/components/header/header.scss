@@ -76,8 +76,9 @@ header{
                         position: relative;
                         display: block;
                         font-size: var(--sm-text-2);
-                        color: var(--white-color);
+                        color: var(--black-color);
                         transition: all 0.3s ease;
+                        font-weight: 600;
 
                         &:hover, &:focus, &:active{
                             color: var(--primary-color);

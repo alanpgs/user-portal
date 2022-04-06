@@ -1,12 +1,13 @@
-import userImage from '../../assets/images/alan-user.png';
 import bgLayer from '../../assets/images/bg_pattern-01.svg';
 import './userbanner.scss';
 
 
-function UserBanner() {
+function UserBanner(props) {
 
-    const img_ = userImage;
     const bg_ = bgLayer;
+    let title_ = props.title;
+    let img_ = props.img;
+    let designnation_ = props.designation
 
     return(
         <section className="page_banner">
@@ -20,16 +21,30 @@ function UserBanner() {
 
             <div className="container">
                 <div className="inner_">
-                    <div className="profile_icon">
-                        <picture>
-                            <source srcSet={img_} type="image/png"></source>
-                            <img src={img_} loading="lazy" />
-                        </picture>
-                    </div>
+
+                    {
+                        img_ && 
+
+                        <div className="profile_icon">
+                            <picture>
+                                <source srcSet={img_} type="image/png"></source>
+                                <img src={img_} loading="lazy" />
+                            </picture>
+                        </div>
+                    }
+
+                    
 
                     <div className="content_">
-                        <h1>Welcome Alan Sha Salim !</h1>
-                        <p>UI Developer</p>
+                        {
+                            title_ && 
+                            <h1>{title_}</h1>
+                        }
+
+                        {
+                            designnation_ && 
+                            <p>{designnation_}</p>
+                        }
                     </div>
                 </div>
             </div>

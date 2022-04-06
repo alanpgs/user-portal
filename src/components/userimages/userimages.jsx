@@ -8,7 +8,7 @@ const UserImages = (props)=> {
 
     useEffect(()=> {
 
-        let url_ = 'https://picsum.photos/v2/list?limit=10';
+        let url_ = 'https://picsum.photos/v2/list?limit=5';
 
         const getImages = fetch(url_, {
             method: 'GET'
@@ -27,16 +27,16 @@ const UserImages = (props)=> {
     }, [])
 
     const imageSelectFn = (value)=> {
-        userImagesList.map((item)=> {
-            if(value == item.id){
-               item.isSelect = !item.isSelect;
+        // userImagesList.map((item)=> {
+        //     if(value == item.id){
+        //        item.isSelect = !item.isSelect;
                
-               setUserImagesList({
-                    ...userImagesList,   
-                    item
-               })
-            }
-        })
+        //        setUserImagesList({
+        //             ...userImagesList,   
+        //             item
+        //        })
+        //     }
+        // })
     }
     
 

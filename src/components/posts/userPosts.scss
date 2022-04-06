@@ -1,0 +1,114 @@
+.user_post_wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    border-radius: 1.75rem;
+    background-color: var(--border-color);
+
+    .user_post_top{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 1em;
+
+        .u_p_t_img{
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            margin-inline-end: 1em;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--white-color);
+            img{
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        .u_p_t_name{
+            position: relative;
+            display: block;
+
+            h4{
+                position: relative;
+                display: block;
+                margin: 0;
+                line-height: 2;
+                font-size: var(--sm-text);
+            }
+
+            p{
+                position: relative;
+                display: block;
+                margin: 0;
+                line-height: 1;
+                font-size: var(--em-text);
+            }
+        }
+    }
+
+    .user_post_image{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 0;
+        margin-bottom: 1em;
+        padding-top: 100%;
+
+        picture{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            img{
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .user_post_desc{
+        position: relative;
+        display: block;
+
+        p{
+            position: relative;
+            display: block;
+            font-size: var(--sm-text-2);
+        }
+
+        .tags_{
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0;
+            list-style: none;
+
+            li{
+                position: relative;
+                display: block;
+                font-size: var(--sm-text-2);
+                color: var(--primary-color);
+                font-weight: 500;
+                margin-inline-end: 0.5em;
+            }
+            
+        }
+    }
+}

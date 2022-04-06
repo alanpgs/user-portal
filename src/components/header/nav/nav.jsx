@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import ThemeContext from '../../../store/themeContext';
 import Button, {IconButton} from "../../button/button";
 import {useLanguageContext} from "../../../store/langContext";
+import { Link } from "react-router-dom";
 
 function Nav() {
 
@@ -27,9 +28,11 @@ function Nav() {
     return (
         <nav>
             <ul className="nav_list">
-                <li><Button title="Login"/></li>
+                <li><Link className="nav_link" to='/'>Home</Link></li>
+                <li><Link className="nav_link" to='/user'>User</Link></li>
                 <li><IconButton setFun={changeTheme}/></li> 
                 <li><Button title={langString} trigger={langFn}/></li> 
+                <li><Button title="Login"/></li>
             </ul>
         </nav>
     )

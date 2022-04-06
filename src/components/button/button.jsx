@@ -1,5 +1,6 @@
 import './button.scss';
 import icon from '../../assets/images/theme.svg';
+import { Link } from "react-router-dom";
 
 export const UserButton = (props)=>{ 
 
@@ -19,6 +20,22 @@ export const UserButton = (props)=>{
         <button className={'btn_primary' + ' ' + style_} type={type_} onClick={triggerMe} >
             <span>{title_}</span>
         </button>
+
+    )
+
+}
+
+export const RoutBtn = (props)=>{ 
+
+    let title_ = props.title ? props.title : '';
+    let style_ = props.style ? props.style : 'default';
+    let link_ = props.link ? props.link : '/';
+
+    return (
+
+        <Link to={link_} className={'btn_primary' + ' ' + style_}>
+            <span>{title_}</span>
+        </Link>
 
     )
 
